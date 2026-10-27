@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add("js")</script>
+<title>Образец страницы — Аудиогид</title>
+<meta name="description" content="Так выглядит карточка картины: сверху название, ниже изображение, внизу экрана кнопка прослушивания, под картиной текст. Эту страницу можно открыть с…">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f1eb">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#141311">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="canonical" href="https://evgenisasim.github.io/gallery/primer/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Образец страницы — Аудиогид">
+<meta property="og:description" content="Так выглядит карточка картины: сверху название, ниже изображение, внизу экрана кнопка прослушивания, под картиной текст. Эту страницу можно открыть с…">
+<meta property="og:locale" content="ru_RU">
+<script defer src="../assets/guide.js"></script>
+</head>
+<body class="guide has-audio">
+<main class="sheet">
+  <article>
+    <header class="heading">
+      <div class="kicker-row">
+        <p class="kicker">Аудиогид</p>
+        <p class="number">Образец</p>
+      </div>
+      <h1>Образец страницы</h1>
+      
+    </header>
+    <figure class="figure">
+  <button type="button" class="zoom" data-zoom>
+    <img src="../media/primer.svg" alt="Образец страницы" width="900" height="1200">
+    <span class="sr-only">Увеличить изображение</span>
+  </button>
+  <figcaption>Нажмите на изображение, чтобы увеличить</figcaption>
+</figure>
+    <div class="text">
+<p>Так выглядит карточка картины: сверху название, ниже изображение, внизу экрана кнопка прослушивания, под картиной текст.</p>
+<p>Эту страницу можно открыть с телефона и проверить звук. Страницы 01–18 пока пустые — в них попадут ваши работы.</p>
+</div>
+  </article>
+</main>
+<div class="dock" data-player hidden>
+  <div class="dock__inner">
+    <button type="button" class="play-cta" data-start>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M9 7.2v9.6L16.8 12 9 7.2z"/></svg>
+      <span>Слушать описание</span>
+      <span class="cta-duration" data-cta-duration hidden></span>
+    </button>
+    <div class="transport" data-transport hidden>
+      <div class="transport__top">
+        <button type="button" class="toggle" data-toggle aria-pressed="true" aria-label="Пауза">
+          <span class="mark" aria-hidden="true">
+            <svg data-icon-play hidden viewBox="0 0 24 24"><path d="M9 7.2v9.6L16.8 12 9 7.2z"/></svg>
+            <svg data-icon-pause viewBox="0 0 24 24"><path d="M8 6.5h2.6v11H8zm5.4 0H16v11h-2.6z"/></svg>
+          </span>
+          <span data-toggle-label>Пауза</span>
+        </button>
+        <button type="button" class="speed" data-speed aria-label="Скорость воспроизведения 1×">1×</button>
+      </div>
+      <div class="transport__bottom">
+        <span class="time-current" data-current>0:00</span>
+        <input class="seek" data-seek type="range" min="0" max="1000" value="0" step="1" aria-label="Позиция воспроизведения" aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0" aria-valuetext="0:00">
+        <span class="time-duration" data-duration>0:00</span>
+      </div>
+    </div>
+    <p class="player__error" data-error hidden role="alert">Не удалось загрузить аудио. Проверьте соединение и откройте страницу ещё раз.</p>
+  </div>
+</div>
+<audio controls preload="metadata" data-audio src="../media/primer.m4a"></audio>
+<script>document.querySelector("[data-player]")?.removeAttribute("hidden")</script>
+<dialog class="lightbox" data-lightbox aria-label="Увеличенное изображение">
+  <button type="button" class="lightbox__close" data-close aria-label="Закрыть">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lightbox__stage">
+    <img src="../media/primer.svg" alt=""  width="900" height="1200">
+  </div>
+</dialog>
+</body>
+</html>
